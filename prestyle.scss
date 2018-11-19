@@ -1,0 +1,135 @@
+
+$speedometerSize : 400px;
+$speedMarkerWidth : 5px;
+$speedMarkerHeight : 20px;
+$color : saturate( skyblue, 70%);
+$totalMarkers : 13;
+$kmTotal : 240;
+// -------------------------------
+* {
+	box-sizing: border-box;
+}
+
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+    font-family: 'Sarpanch', sans-serif;    
+    background:#1a1a1a;
+}
+
+.speedometer {
+    width: $speedometerSize;
+    height: $speedometerSize;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transform: rotate(-90deg);
+}
+
+.speed  {
+    text-align: center;
+    color:$color;
+    font-size: 5em;
+    text-shadow: $color 0 0 $speedMarkerWidth*2;
+    transform: rotate(90deg);
+    transform-origin: 0 0;
+    position: relative;
+    left: 1.7em;
+
+    &:before {
+        content: '-';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        animation: kmh 6s linear 0s 1 forwards;
+    }
+    
+    span {
+        font-size: 0.3em;
+        display: block;
+    }
+}
+
+[class^="speed-marker-"] {
+    height: $speedometerSize/2;
+    opacity: .4;
+}
+
+[class^="speed-marker-"], 
+[class^="speed-marker-"]:after {
+    width: $speedMarkerWidth;
+}
+
+[class^="speed-marker-"], 
+[class^="speed-marker-"]:after,
+[class^="speed-marker-"]:before {
+    display: block;
+    position: absolute;
+    top: $speedometerSize/2;
+    left: 0;
+    margin-left: floor($speedMarkerWidth/2) * -1;
+    transform-origin: top center;
+}
+
+[class^="speed-marker-"]:after {
+    content: ' ';
+    height: $speedMarkerHeight;
+}
+
+[class^="speed-marker-"]:not(:first-child):before {
+    content: ' ';    
+    height: $speedMarkerHeight + 3;
+    width: floor($speedMarkerWidth / 1.5);
+    margin-left: -1 * $speedMarkerWidth * 5;    
+}
+
+
+[class^="speed-marker-"]:after,
+[class^="speed-marker-"]:before {
+    background: $color;
+    box-shadow: 0 0 $speedMarkerWidth $speedMarkerWidth/2 $color;    
+}
+
+@keyframes toggleMarkers{
+    0% {
+        opacity: .4;
+    }
+    50% {
+        opacity: .7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes kmh{
+    @for $i from 0 through ($totalMarkers - 3) {
+        @if(($i * 10) < 100){
+            #{($i * 10)}% {
+                content : '#{($i * 20)}';
+            }            
+        }@else{
+            100%{
+                content : '#{($kmTotal)}';
+            }
+        }
+    }
+}
+
+@for $i from 1 through $totalMarkers {
+    .speed-marker-#{$i} {
+        $d : 0-($i * $totalMarkers);
+        transform: rotate(#{$d}deg);        
+        animation: toggleMarkers 500ms linear #{($totalMarkers - $i)/2}s 1 forwards;
+        @if $i < ($totalMarkers/2) {
+            &:before {
+                transform: rotate(#{$i * 2}deg);
+            }
+        }        
+    }
+}

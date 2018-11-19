@@ -1,0 +1,97 @@
+
+<html>
+    <head>
+        <title>SOLAR CAR UI</title>
+        <meta charset="UTF-8"/>
+        <script src = "app.js"></script>
+        <link rel = "stylesheet" href = "style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    </head>
+
+
+    <body>
+        <div id="header">
+        <div id = "logo">
+                <div>
+                    <img src = "images/logo1-color.png" id = "logoimg">
+                
+                </div>  
+        </div>
+        <div id = "navbar">
+            <div class="topnav">
+                <a href="index.html">Home</a>
+                <a href="#news">Battery</a>
+                <a href="#contact">Motors</a>
+                <a href="#about">Solar</a>
+              </div>
+              
+        </div>
+    </div>
+        <div class = "linegraph" id = "speed">
+        </div>
+        <div class = "linegraph" id="batteryRemaining"></div>
+        <div id = "mph">
+        </div>
+
+    </body>
+
+<script type="text/JavaScript">
+  
+
+var trace2 = {
+  x: [1, 2, 3, 4],
+  y: [16, 5, 11, 9],
+  type: 'scatter',
+  name: "Speed"
+};
+var layout = {
+    title: "Speed(MPH)",
+                   yaxis: {
+                           fixedrange: true
+                          },
+                   xaxis : {
+                            fixedrange: true
+                            }
+                            
+                  };
+
+
+var data = [ trace2];
+
+Plotly.newPlot('speed', data,layout,{title: "SPEED"});
+
+var trace3 = {
+  x: [1, 2, 3, 4],
+  y: [6, 52, 131, 98],
+  name: "Battery percent"
+};
+var layout = {
+    title: "Battery %",
+                   yaxis: {
+                           fixedrange: true
+                          },
+                   xaxis : {
+                            fixedrange: true
+                            }
+                            
+                  };
+
+
+var data = [ trace3];
+
+Plotly.newPlot('batteryRemaining', data,layout,{title: "SPEED"});
+
+</script>
+
+
+
+</html>
