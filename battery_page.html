@@ -1,0 +1,483 @@
+<html>
+    <head>
+        <title>Battery Page</title>
+        <meta charset="UTF-8"/>
+        <script src = "app.js"></script>
+        <link rel = "stylesheet" href = "style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+</head>
+    <body>
+        <div id="header">
+        <div id = "logo">
+                <div>
+                    <img src = "images/logo1-color.png" id = "logoimg">
+                
+                </div>  
+        </div>
+        <div id = "navbar">
+            <div class="topnav">
+                <a href="index.html">Home</a>
+                <a href="battery_page.html">Battery</a>
+                <a href="#contact">Motors</a>
+                <a href="#about">Solar</a>
+              </div>
+              
+        </div>
+    </div>
+        <div class = "linegraph" id = "BatteryCell_1">
+        </div>
+        <div class = "linegraph" id="BatteryCell_2"></div>
+        <div class = "linegraph" id="BatteryCell_3">
+        </div>
+        <div class = "linegraph" id="BatteryCell_4">
+        </div>
+        <div class = "linegraph" id="BatteryCell_5">
+        </div>
+        <div class = "linegraph" id="BatteryCell_6">
+        </div>
+        <div class = "linegraph" id="BatteryCell_7">
+        </div>
+        <div class = "linegraph" id="BatteryCell_8">
+        </div>
+        <div class = "linegraph" id="BatteryCell_9">
+        </div>
+        <div class = "linegraph" id="BatteryCell_10">
+        </div>
+        <div class = "linegraph" id="BatteryCell_11">
+        </div>
+        <div class = "linegraph" id="BatteryCell_12">
+        </div>
+        <div class = "linegraph" id="BatteryCell_13">
+        </div>
+        <div class = "linegraph" id="BatteryCell_14">
+        </div>
+        <div class = "linegraph" id="BatteryCell_15">
+        </div>
+        <div class = "linegraph" id="BatteryCell_16">
+        </div>
+        <div class = "linegraph" id="BatteryCell_17">
+        </div>
+        <div class = "linegraph" id="BatteryCell_18">
+        </div>
+        <div class = "linegraph" id="BatteryCell_19">
+        </div>
+        <div class = "linegraph" id="BatteryCell_20">
+        </div>
+    </body>
+
+<script type="text/JavaScript">
+  
+var trace1 = {
+  x: [1, 2, 3, 4],
+  y: [16, 5, 11, 9],
+  type: 'scatter',
+  name: "Battery Cell 1"
+};
+var layout = {
+    title: "Battery Cell 1",
+                   yaxis: {
+                           fixedrange: true
+                          },
+                   xaxis : {
+                            fixedrange: true
+                            }
+                            
+                  };
+
+
+var data = [ trace1];
+
+Plotly.newPlot('BatteryCell_1', data,layout,{title: "Battery Cell 1"});
+
+var trace2= {
+  x: [1, 2, 3, 4],
+  y: [6, 52, 131, 98],
+  name: "Battery Cell 2"
+};
+var layout = {
+    title: "Battery Cell 2",
+                   yaxis: {
+                           fixedrange: true
+                          },
+                   xaxis: {
+                            fixedrange: true
+                            }
+                            
+                  };
+
+
+var data = [ trace2];
+
+Plotly.newPlot('BatteryCell_2', data,layout,{title: "Battery Cell 2"});
+
+var trace3 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 3"
+};
+var layout = {
+title: "Battery Cell 3",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace3];
+
+Plotly.newPlot('BatteryCell_3',data,layout,{title: "Battery Cell 3"});
+
+var trace4 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 4"
+};
+var layout = {
+title: "Battery Cell 4",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace4];
+
+Plotly.newPlot('BatteryCell_4',data,layout,{title: "Battery Cell 4"});
+
+var trace5 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 5"
+};
+var layout = {
+title: "Battery Cell 5",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace5];
+
+Plotly.newPlot('BatteryCell_5',data,layout,{title: "Battery Cell 5"});
+
+var trace6 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 6"
+};
+var layout = {
+title: "Battery Cell 6",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace6];
+
+Plotly.newPlot('BatteryCell_6',data,layout,{title: "Battery Cell 6"});
+
+var trace7 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 7"
+};
+var layout = {
+title: "Battery Cell 7",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace7];
+
+Plotly.newPlot('BatteryCell_7',data,layout,{title: "Battery Cell 7"});
+
+var trace8 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 8"
+};
+var layout = {
+title: "Battery Cell 8",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace8];
+
+Plotly.newPlot('BatteryCell_8',data,layout,{title: "Battery Cell 8"});
+
+var trace9 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 9"
+};
+var layout = {
+title: "Battery Cell 9",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace9];
+
+Plotly.newPlot('BatteryCell_9',data,layout,{title: "Battery Cell 9"});
+
+var trace10 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 10"
+};
+var layout = {
+title: "Battery Cell 10",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace10];
+
+Plotly.newPlot('BatteryCell_10',data,layout,{title: "Battery Cell 10"});
+
+var trace11 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 11"
+};
+var layout = {
+title: "Battery Cell 11",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace11];
+
+Plotly.newPlot('BatteryCell_11',data,layout,{title: "Battery Cell 11"});
+
+var trace12 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 12"
+};
+var layout = {
+title: "Battery Cell 12",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace12];
+
+Plotly.newPlot('BatteryCell_12',data,layout,{title: "Battery Cell 12"});
+
+var trace13 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 13"
+};
+var layout = {
+title: "Battery Cell 13",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace13];
+
+Plotly.newPlot('BatteryCell_13',data,layout,{title: "Battery Cell 13"});
+
+var trace14 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 14"
+};
+var layout = {
+title: "Battery Cell 14",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace14];
+
+Plotly.newPlot('BatteryCell_14',data,layout,{title: "Battery Cell 14"});
+
+var trace15 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 15"
+};
+var layout = {
+title: "Battery Cell 15",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace15];
+
+Plotly.newPlot('BatteryCell_15',data,layout,{title: "Battery Cell 15"});
+
+var trace16 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 16"
+};
+var layout = {
+title: "Battery Cell 16",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace16];
+
+Plotly.newPlot('BatteryCell_16',data,layout,{title: "Battery Cell 16"});
+
+var trace17 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 17"
+};
+var layout = {
+title: "Battery Cell 17",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace17];
+
+Plotly.newPlot('BatteryCell_17',data,layout,{title: "Battery Cell 17"});
+
+var trace18 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 18"
+};
+var layout = {
+title: "Battery Cell 18",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace18];
+
+Plotly.newPlot('BatteryCell_18',data,layout,{title: "Battery Cell 18"});
+
+var trace19 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 19"
+};
+var layout = {
+title: "Battery Cell 19",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace19];
+
+Plotly.newPlot('BatteryCell_19',data,layout,{title: "Battery Cell 19"});
+
+var trace20 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Battery Cell 20"
+};
+var layout = {
+title: "Battery Cell 20",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace20];
+
+Plotly.newPlot('BatteryCell_20',data,layout,{title: "Battery Cell 20"});
+
+</script>
+
+</html>
